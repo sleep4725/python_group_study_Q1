@@ -46,6 +46,9 @@ class ImageGet:
                     self.chrome_driver.implicitly_wait(3)
 
                     ## iframe 처리 start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                    """ 참고 블로그 
+                    https://dejavuqa.tistory.com/198
+                    """
                     editor = self.chrome_driver.find_element_by_css_selector("iframe#da_iframe_time")
                     self.chrome_driver.switch_to.frame(editor)
                     response = self.chrome_driver.find_element_by_css_selector("div#addiv.ad > a#ac_banner_a > img")
@@ -72,7 +75,7 @@ class ImageGet:
 
     def image_download(self, url):
         """
-
+        참고 사이트 : https://www.it-swarm.dev/ko/python/python-url%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%A0%80%EC%9E%A5/1053949951/
         :param url:
         :return:
         """
